@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <center>
+        <div class="card">
+            <img src="..//img/limashs.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Limas</h5>
+              <form>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Sisi</label>
+                  <input type="number" class="form-control" placeholder="Masukan Alas" id="sisiLimas" aria-describedby="emailHelp">
+                  <label for="exampleInputEmail1" class="form-label">Tinggi</label>
+                  <input type="number" class="form-control" placeholder="Masukan Tinggi" id="tinggiLimas" aria-describedby="emailHelp">
+                </div>
+              </form>
+              <hr>
+              <div class="hasil">
+                <h6>Hasil:</h6>
+                <div class="text-luas">
+                  Volume:
+                </div>
+                <div class="jawaban" id="volumeLimas">
+                  0
+                </div>
+                <div class="text-keliling">
+                  Luas Permukaan:
+                </div>
+                <div class="jawaban" id="luasLimas">
+                  0
+                </div>
+                <button type="button" id="tombol" disabled="disabled" class="btn btn-langkah btn-ruang" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                  Langkah Langkah
+                </button>
+                <!-- Modal -->
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Limas</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="langkahLimas">
+                          
+                        </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary btn-ruang" data-bs-dismiss="modal">Keluar</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    </center>
+  <script src="..//script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+</body>
+</html>
