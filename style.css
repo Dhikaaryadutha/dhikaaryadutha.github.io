@@ -76,15 +76,6 @@ h6{
 .judul h6{
     margin-top: 20px;
 }
-.navbar{
-    background-color: #598E91;
-    padding-left: 18px;
-}
-.navbar-teks{
-    color:white;
-    font-family: 'Nerko One', cursive;
-    font-size: 25px;
-}
 
 .hasil h6{
     text-align: left;
@@ -167,7 +158,9 @@ h6{
         color: black;
         font-size: 10px;
     }.card{
-        max-width:100%;
+        max-width:90%;
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
 }
 @media screen and (max-width:390px){
@@ -181,6 +174,8 @@ h6{
         max-width: 4rem;
     }
     .card{
-        max-width: 100%;
+        max-width:90%;
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
 }
