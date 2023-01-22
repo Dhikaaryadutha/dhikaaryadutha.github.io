@@ -132,6 +132,30 @@ h6{
     text-align: left;
     box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+.copy-button{
+    background-image:  url(img/copy.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 6px;
+    width: 30px;
+    height: 30px;
+    box-shadow: 0 1px 1.5px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    border-radius: 5px;
+    border: 1px solid #6c757d;
+}
+.copy-button:hover{
+    cursor: pointer;
+}
+
+.back-button img{
+    width: 70px;
+    height: 70px;
+    margin-left: -20px;
+}
+.back-button img:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
 @media screen and (max-width:500px){
     .kotak{
         max-width: 3rem;
