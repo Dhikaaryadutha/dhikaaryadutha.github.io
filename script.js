@@ -5,6 +5,14 @@ const volume="&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp"
 const luasPer="&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp"
 const pytha="&nbsp &nbsp &nbsp &nbsp&nbsp"
 
+function copyButton(){
+    const copy=document.querySelector('.copy-button')
+    copy.style.backgroundImage="url(../img/copied.jpg)"
+    setInterval(()=>{
+        copy.style.backgroundImage="url(../img/copy.jpg)"
+    },9000)}
+const tombolCopy=document.querySelector('.copy-button')
+
 //PERSEGI
 const sisipersegi= document.getElementById('sisipersegi')
 const luasPersegi= document.getElementById('luasPersegi')
@@ -31,7 +39,15 @@ if(sisipersegi){
         Keliling = Sisi x 4 ${br}
         ${keliling} = ${sPersegi} x 4 ${br}
         ${keliling} = ${kPersegi} ${br}`
+        tombolCopy.addEventListener('click',()=>{
+            let copyText = document.querySelector(".langkahPersegi").innerHTML;
+            copyTextClean= copyText.replace(/&nbsp/g," ");
+            copyTextClean1= copyTextClean.replace(/<br>/g,"");
+            copyTextClean2= copyTextClean1.replace(/;/g,"");
+            navigator.clipboard.writeText(copyTextClean2).innerHTML; 
+        })
     });
+    
 }
 
 //PERSEGI PANJANG
@@ -63,8 +79,16 @@ ${luas} = ${luasPP} ${br}
 Keliling = (2 x P) + (2 x L) ${br}
 ${keliling} = (2 x ${panPP}) + (2 x ${lebPP}) ${br}
 ${keliling} = ${panPP*2} + ${lebPP*2} ${br}
-${keliling} = ${kPP}` 
+${keliling} = ${kPP}`
+        tombolCopy.addEventListener('click',()=>{
+            let copyText = document.querySelector(".langkahPP").innerHTML;
+            copyTextClean= copyText.replace(/&nbsp/g," ");
+            copyTextClean1= copyTextClean.replace(/<br>/g,"");
+            copyTextClean2= copyTextClean1.replace(/;/g,"");
+            navigator.clipboard.writeText(copyTextClean2).innerHTML; 
+        })
     });
+    
 }
 
 //Segitiga
@@ -102,6 +126,13 @@ if(alasSegitiga)
         ${keliling} = ( ${sisiMiring} x 2 ) + ${alaSegitiga} ${br}
         ${keliling} = ${sisiMiring*2} + ${alaSegitiga}${br}
         ${keliling} = ${kSegitiga}` 
+        tombolCopy.addEventListener('click',()=>{
+            let copyText = document.querySelector(".langkahSegitiga")[0].innerHTML;
+            copyTextClean= copyText.replace(/&nbsp/g," ");
+            copyTextClean1= copyTextClean.replace(/<br>/g,"");
+            copyTextClean2= copyTextClean1.replace(/;/g,"");
+            navigator.clipboard.writeText(copyTextClean2).innerHTML; 
+        })
     })
 
 
@@ -142,6 +173,13 @@ if(jjLingkaran){
         ${keliling} = ${pi} x 2 x ${JJlingkaran} ${br}
         ${keliling} = ${pi} x ${JJlingkaran*2} ${br}
         ${keliling} = ${kLingkaran}` 
+        tombolCopy.addEventListener('click',()=>{
+            let copyText = document.querySelector(".langkahLingkaran")[0].innerHTML;
+            copyTextClean= copyText.replace(/&nbsp/g," ");
+            copyTextClean1= copyTextClean.replace(/<br>/g,"");
+            copyTextClean2= copyTextClean1.replace(/;/g,"");
+            navigator.clipboard.writeText(copyTextClean2).innerHTML; 
+        })
     });
 }
 
@@ -168,7 +206,15 @@ if(alasJJ){
         Luas = A x T ${br}
         ${luas} = ${alJJ} x ${tiJJ} ${br}
         ${luas} = ${lJJ} ${br}`
+        tombolCopy.addEventListener('click',()=>{
+            let copyText = document.querySelector(".langkahJJ")[0].innerHTML;
+            copyTextClean= copyText.replace(/&nbsp/g," ");
+            copyTextClean1= copyTextClean.replace(/<br>/g,"");
+            copyTextClean2= copyTextClean1.replace(/;/g,"");
+            navigator.clipboard.writeText(copyTextClean2).innerHTML; 
+        })
     });
+    
 }
 
 //TRAPESIUM
@@ -199,7 +245,15 @@ if(sisiaTrapesium){
         ${luas} = ½ x ${Number(aTrapesium)+Number(bTrapesium)} x ${tiTrapesium} ${br}
         ${luas} = ½ x ${(Number(aTrapesium)+Number(bTrapesium))*tiTrapesium} ${br}
         ${luas} = ${lTrapesium}`
+        tombolCopy.addEventListener('click',()=>{
+            let copyText = document.querySelector(".langkahTrapesium")[0].innerHTML;
+            copyTextClean= copyText.replace(/&nbsp/g," ");
+            copyTextClean1= copyTextClean.replace(/<br>/g,"");
+            copyTextClean2= copyTextClean1.replace(/;/g,"");
+            navigator.clipboard.writeText(copyTextClean2).innerHTML; 
+        })
     });
+    
 }
 
 //BELAH KETUPAT
@@ -237,7 +291,15 @@ if(diagonal1BK){
         ${keliling} = √${Number((d1BK/2)**2)+Number((d2BK/2)**2)} x 4 ${br}
         ${keliling} = ${sisiMiring} x 4 ${br}
         ${keliling} = ${kBK}`
+        tombolCopy.addEventListener('click',()=>{
+            let copyText = document.querySelector(".langkahBK")[0].innerHTML;
+            copyTextClean= copyText.replace(/&nbsp/g," ");
+            copyTextClean1= copyTextClean.replace(/<br>/g,"");
+            copyTextClean2= copyTextClean1.replace(/;/g,"");
+            navigator.clipboard.writeText(copyTextClean2).innerHTML; 
+        })
     });
+    
 }
 
 //LAYANG LAYANG
@@ -264,7 +326,14 @@ if(diagonal1LL){
         ${luas} = ½ x ${d1LL} x ${d2LL} ${br}
         ${luas} = ½ x ${d1LL*d2LL} ${br}
         ${luas} = ${lLL} ${br}`
-    });
+        tombolCopy.addEventListener('click',()=>{
+            let copyText = document.querySelector(".langkahLL")[0].innerHTML;
+            copyTextClean= copyText.replace(/&nbsp/g," ");
+            copyTextClean1= copyTextClean.replace(/<br>/g,"");
+            copyTextClean2= copyTextClean1.replace(/;/g,"");
+            navigator.clipboard.writeText(copyTextClean2).innerHTML; 
+        })
+    });    
 }
 
 //KUBUS
@@ -295,6 +364,13 @@ if(sisiKubus){
         ${luasPer} = (${sKubus} x ${sKubus}) x 6 ${br}
         ${luasPer} = ${sKubus**2} x 6 ${br}
         ${luasPer} = ${lKubus} `
+        tombolCopy.addEventListener('click',()=>{
+            let copyText = document.querySelector(".langkahKubus").innerHTML;
+            copyTextClean= copyText.replace(/&nbsp/g," ");
+            copyTextClean1= copyTextClean.replace(/<br>/g,"");
+            copyTextClean2= copyTextClean1.replace(/;/g,"");
+            navigator.clipboard.writeText(copyTextClean2).innerHTML; 
+        })
     });
 }
 
@@ -332,6 +408,13 @@ if(PanjangBalok){
         ${luasPer} = (${panBalok*lebBalok} + ${panBalok*tiBalok} + ${tiBalok*lebBalok}) x 2 ${br}
         ${luasPer} = ${panBalok*lebBalok + panBalok*tiBalok + tiBalok*lebBalok} x 2 ${br}
         ${luasPer} = ${lBalok} `
+        tombolCopy.addEventListener('click',()=>{
+            let copyText = document.querySelector(".langkahBalok").innerHTML;
+            copyTextClean= copyText.replace(/&nbsp/g," ");
+            copyTextClean1= copyTextClean.replace(/<br>/g,"");
+            copyTextClean2= copyTextClean1.replace(/;/g,"");
+            navigator.clipboard.writeText(copyTextClean2).innerHTML; 
+        })
     });
 }
 
@@ -380,7 +463,13 @@ if(jjKerucut){
         ${luasPer} = ${pi} x ${jarijariKerucut} x ${Number(jarijariKerucut)+Number(sisiMiring)} ${br}
         ${luasPer} = ${lKerucut}
         `
-        console.log(sisiMiring)
+        tombolCopy.addEventListener('click',()=>{
+            let copyText = document.querySelector(".langkahKerucut").innerHTML;
+            copyTextClean= copyText.replace(/&nbsp/g," ");
+            copyTextClean1= copyTextClean.replace(/<br>/g,"");
+            copyTextClean2= copyTextClean1.replace(/;/g,"");
+            navigator.clipboard.writeText(copyTextClean2).innerHTML; 
+        })
     });
 }
 
@@ -424,8 +513,15 @@ if(jjTabung){
         Luas Permukaan = 2 x π x r x (r + t) ${br}
         ${luasPer} = 2 x ${pi} x ${jarijariTabung} x (${jarijariTabung} + ${tiTabung}) ${br}
         ${luasPer} = 2 x ${pi} x ${jarijariTabung} x ${Number(jarijariTabung)+Number(tiTabung)}${br}
-        ${luasPer} = ${lTabung}
+        ${luasPer} = ${lTabung}       
         `
+        tombolCopy.addEventListener('click',()=>{
+            let copyText = document.querySelector(".langkahTabung").innerHTML;
+            copyTextClean= copyText.replace(/&nbsp/g," ");
+            copyTextClean1= copyTextClean.replace(/<br>/g,"");
+            copyTextClean2= copyTextClean1.replace(/;/g,"");
+            navigator.clipboard.writeText(copyTextClean2).innerHTML; 
+        })
     });
 }
 
@@ -465,8 +561,15 @@ if(jjBola){
         Luas Permukaan = 4 x π x r²${br}
         ${luasPer} = 4 x ${pi} x ${JJBola}²${br}
         ${luasPer} = 4 x ${pi} x ${JJBola**2}${br}
-        ${luasPer} = ${lBola}
+        ${luasPer} = ${lBola}        
         `
+        tombolCopy.addEventListener('click',()=>{
+            let copyText = document.querySelector(".langkahBola").innerHTML;
+            copyTextClean= copyText.replace(/&nbsp/g," ");
+            copyTextClean1= copyTextClean.replace(/<br>/g,"");
+            copyTextClean2= copyTextClean1.replace(/;/g,"");
+            navigator.clipboard.writeText(copyTextClean2).innerHTML; 
+        })
     });
 }
 
@@ -499,8 +602,15 @@ if(alasPrisma){
         ${volume} = (½ x ${alaPrisma} x ${tiSeg}) x ${tiPrisma}${br}
         ${volume} = (½ x ${alaPrisma*tiSeg}) x ${tiPrisma}${br}
         ${volume} = ${alaPrisma*tiSeg/2} x ${tiPrisma}${br}
-        ${volume} = ${vPrisma}
+        ${volume} = ${vPrisma}        
         `
+        tombolCopy.addEventListener('click',()=>{
+            let copyText = document.querySelector(".langkahPrisma").innerHTML;
+            copyTextClean= copyText.replace(/&nbsp/g," ");
+            copyTextClean1= copyTextClean.replace(/<br>/g,"");
+            copyTextClean2= copyTextClean1.replace(/;/g,"");
+            navigator.clipboard.writeText(copyTextClean2).innerHTML; 
+        })
     });
 }
 
@@ -541,9 +651,15 @@ if(sisiLimas){
         ${luasPer} = ${sLimas**2} + (4 x (½ x ${sLimas} x ${tiSegLim}))${br}
         ${luasPer} = ${sLimas**2} + (4 x ${sLimas*tiSegLim/2})${br}
         ${luasPer} = ${sLimas**2} + ${sLimas*tiSegLim/2*4}${br}
-        ${luasPer} = ${lLimas}
+        ${luasPer} = ${lLimas}    
         `
-        
+        tombolCopy.addEventListener('click',()=>{
+            let copyText = document.querySelector(".langkahLimas").innerHTML;
+            copyTextClean= copyText.replace(/&nbsp/g," ");
+            copyTextClean1= copyTextClean.replace(/<br>/g,"");
+            copyTextClean2= copyTextClean1.replace(/;/g,"");
+            navigator.clipboard.writeText(copyTextClean2).innerHTML; 
+        })
     });
 }
 
@@ -573,6 +689,13 @@ if (sisiBA){
         ${pytha} = √${sisica**2-sisiba**2}${br}
         ${pytha} = ${sisiaa}
         `
+        tombolCopy.addEventListener('click',()=>{
+            let copyText = document.querySelector(".langkahSisia").innerHTML;
+            copyTextClean= copyText.replace(/&nbsp/g," ");
+            copyTextClean1= copyTextClean.replace(/<br>/g,"");
+            copyTextClean2= copyTextClean1.replace(/;/g,"");
+            navigator.clipboard.writeText(copyTextClean2).innerHTML; 
+        })
     })
 }
 
@@ -602,6 +725,13 @@ if (sisiAB){
         ${pytha} = √${sisicb**2-sisiab**2}${br}
         ${pytha} = ${sisibb}
         `
+        tombolCopy.addEventListener('click',()=>{
+            let copyText = document.querySelector(".langkahSisib").innerHTML;
+            copyTextClean= copyText.replace(/&nbsp/g," ");
+            copyTextClean1= copyTextClean.replace(/<br>/g,"");
+            copyTextClean2= copyTextClean1.replace(/;/g,"");
+            navigator.clipboard.writeText(copyTextClean2).innerHTML; 
+        })
     })
 }
 
@@ -627,5 +757,12 @@ if (sisiAC){
         ${pytha} = √${sisiac**2+sisibc**2}${br}
         ${pytha} = ${sisicc}
         `
+        tombolCopy.addEventListener('click',()=>{
+            let copyText = document.querySelector(".langkahSisic").innerHTML;
+            copyTextClean= copyText.replace(/&nbsp/g," ");
+            copyTextClean1= copyTextClean.replace(/<br>/g,"");
+            copyTextClean2= copyTextClean1.replace(/;/g,"");
+            navigator.clipboard.writeText(copyTextClean2).innerHTML; 
+        })
     })
 }
